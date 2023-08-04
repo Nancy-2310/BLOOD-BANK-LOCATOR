@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/javaScript/login.js" defer></script>
+  </head>
+  <body>
+    <div class="box">
+      <h1>The gift of blood is a gift to someone's life</h1>
+      <p
+        style="
+          color: green;
+          font-size: medium;
+          font-weight: 700;
+          display:none;
+        "
+      >
+        <%= Value %>
+      </p>
+      <p
+        id="result"
+        style="
+          color: red;
+          font-size: medium;
+          font-weight: 700;
+          display:none;
+        "
+      >
+      </p>
+      <form action="/auth/login" method="post" class="form" >
+        <h2>Blood Bank Login : Portal/Application</h2>
+        <br />
+        <div class="hero">
+          <div class="vertical">
+            Username
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Enter your username"><%= email %>
+          </div>
+          <div class="vertical">
+            Password
+            <input type="password" name="password" autocomplete="current-password" placeholder="Enter Your Password" required id="password">
+        
+          </div>
+        </div>
+        <button class="signin" type="submit"  onclick="handelSubmit(event)">
+          Sign in!
+        </button>
+        <p>
+          Don't have an account?
+          <a href="/signup">Register here</a>
+        </p>
+        <p>
+          <a href="/auth/forgetPass"> Forget PassWord ? </a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

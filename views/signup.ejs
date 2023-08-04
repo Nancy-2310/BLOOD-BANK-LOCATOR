@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/auth-form.css">
+    <script src="/javaScript/signup.js" defer></script>
+
+  </head>
+  <body>
+    <form action="/auth/signup" method="POST" id="form">
+      <header>
+        <h1>Sign Up Form</h1>
+      </header>
+
+      <!-- Blood Bank Name -->
+      <!-- <div class="vertical">
+        
+        </div>
+      </div> -->
+
+      <div class="vertical">
+        <div class="horizontal">
+          <div class="vertical-inside">
+            <!-- Email -->
+            <label for="email">Enter your Email</label>
+            <div class="email">
+              <input type="email" name="email" id="email" placeholder="Enter your email" pattern="[^\s@]+@[^\s@]+\.(com|in)" required />
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="vertical-inside">
+            <label for="blood_bank_name">Enter your blood bank name</label>
+            <div class="blood-bank-name" >
+                <input
+                  type="text"
+                  id="blood_bank_name"
+                  name="blood_bank_name"
+                  required
+                  placeholder="Enter your Blood Bank Name"
+                />
+            </div> 
+          </div>
+        </div>
+        <div class="horizontal"></div>
+      </div>
+
+      <div class="vertical">
+        <div class="horizontal">
+          <div class="vertical-inside">
+            <!-- Email -->
+            <label for="license_number">Enter your license number</label>
+            <div class="license-number">
+              <input
+              type="text"
+              name="license_number"
+              id="license_number"
+              placeholder="Enter your license number"
+              required
+            />
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="vertical-inside">
+            <label for="contact">Enter your Contact No.</label>
+            <div class="contact">
+              <input type="number" name="contact" id="contact" placeholder="Enter your contact number" pattern="[0-9]{10}" required />
+            </div>  
+          </div>
+        </div>
+        <div class="horizontal"></div>
+      </div>
+
+      <!-- License Number -->
+      <!-- <div class="vertical">
+        <label for="license_number">Enter your license number</label>
+        <div class="license-number">
+          <input
+            type="text"
+            name="license_number"
+            id="license_number"
+            placeholder="Enter your license number"
+            required
+          />
+        </div>
+      </div> -->
+      
+      <!-- Valid From - Valid Till -->
+      <div class="vertical">
+        <div class="horizontal">
+          
+
+          <!-- valid from -->
+          <div class="vertical-inside">
+            <label for="valid_till">License Valid From</label>
+            <div class="valid-till">
+              <input type="date" name="valid_till" id="valid_till" required />
+            </div>
+          </div>
+
+          <!-- valid till -->
+          <div class="vertical-inside">
+            <label for="valid_from">License Valid Till</label>
+            <div class="valid-from">
+              <input type="date" name="valid_from" id="valid_from" required />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Password - Confirm Password -->
+      <div class="vertical">
+        <div class="horizontal">
+          <div class="vertical-inside">
+            <!-- Password\ -->
+            <label for="password">Enter your password</label>
+            <div class="password">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@])[A-Za-z\d@]{8,}$"
+              />
+            </div>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="vertical-inside">
+            <label for="confirm_password">Confirm your password</label>
+            <div class="confirm-password">
+              <input
+                type="text"
+                name="confirm_password"
+                id="confirm_password"
+                placeholder="Confirm your password"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="horizontal"></div>
+      </div>
+      <div class="vertical">
+        <ul id="err"></ul>
+      </div>
+      <div class="vertical" style="align-items: center; padding-left: 0px">
+        <button type="submit" id="submit">Sign Up</button>
+        <button onclick="location.replace('./login.html')">Login</button>
+      </div>
+    </form>
+  </body>
+  <script>
+  </script>
+</html>
